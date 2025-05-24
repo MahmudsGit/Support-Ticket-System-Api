@@ -35,4 +35,13 @@ class UserController {
         return Response::json($result, isset($result['token']) ? 200 : 401);
     }
 
+    public static function logout() {
+        $result = Auth::logout();
+    
+        if ($result['success']) {
+            return Response::json(['message' => $result['message']], 200);
+        } else {
+            return Response::json(['error' => $result['message']], 400);
+        }
+    }
 }
