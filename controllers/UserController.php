@@ -27,4 +27,12 @@ class UserController {
         
         return Response::json($result, $result['success'] ? 201 : 400);
     }
+
+    public static function login() {
+        $data = json_decode(file_get_contents("php://input"), true);
+        $result = User::login($data);
+        
+        return Response::json($result, isset($result['token']) ? 200 : 401);
+    }
+
 }
