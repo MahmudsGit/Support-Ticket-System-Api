@@ -4,6 +4,7 @@ require_once 'middleware/authMiddleware.php';
 require_once 'middleware/authAdminMiddleware.php';
 require_once 'controllers/DepartmentController.php';
 require_once 'controllers/TicketController.php';
+require_once 'controllers/TicketNoteController.php';
 
 $routes = [
     // User routes
@@ -24,4 +25,9 @@ $routes = [
     ['method' => 'GET', 'pattern' => '#^api/tickets/my$#', 'handler' => ['TicketController', 'myTickets'], 'middleware' => ['authMiddleware']], // User's own tickets can only view
     ['method' => 'GET', 'pattern' => '#^api/tickets$#', 'handler' => ['TicketController', 'allTickets'], 'middleware' => ['authAdminMiddleware']], // Admin only - list all tickets
     ['method' => 'PUT', 'pattern' => '#^api/tickets/(\d+)/status$#', 'handler' => ['TicketController', 'changeStatus'], 'middleware' => ['authAdminMiddleware']], // Admin only - change ticket status
+
+    ['method' => 'POST', 'pattern' => '#^api/tickets/(\d+)/notes$#', 'handler' => ['TicketNoteController', 'addNote'], 'middleware' => ['authMiddleware']], // auth user Create Add note to a ticket
+['method' => 'GET', 'pattern' => '#^api/tickets/(\d+)/notes/my$#', 'handler' => ['TicketNoteController', 'getNotes'], 'middleware' => ['authMiddleware']], // User's own notes for a ticket
+['method' => 'GET', 'pattern' => '#^api/tickets/(\d+)/notes$#', 'handler' => ['TicketNoteController', 'allNotes'], 'middleware' => ['authAdminMiddleware']], // Admin only - list all notes for a ticket
+['method' => 'DELETE', 'pattern' => '#^api/tickets/(\d+)/notes/(\d+)$#', 'handler' => ['TicketNoteController', 'delete'], 'middleware' => ['authAdminMiddleware']], // Admin only - delete a note
 ];
