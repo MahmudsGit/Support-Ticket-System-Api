@@ -1,0 +1,1549 @@
+{
+	"info": {
+		"_postman_id": "f2cabcdc-5b27-4925-874f-e3c1d9885867",
+		"name": "ticket system api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21749152"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/11.0.2"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/register",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "created / 201",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/11.0.2"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 May 2025 17:49:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"success\": true,\n \"message\": \"User registered\"\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/11.0.2"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/login",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/11.0.2"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 May 2025 14:57:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"token\": \"ecbae7ec9fcf332e4df41fc8aeeac77c\",\n \"user\": {\n  \"id\": 1,\n  \"name\": \"Alice Admin\",\n  \"role\": \"admin\"\n }\n}"
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 1a375e6814b160285d06b652ce773c3e"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/11.0.2"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/logout",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 1a375e6814b160285d06b652ce773c3e"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/11.0.2"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/logout",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 May 2025 18:00:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"message\": \"Logged out successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "departments",
+			"item": [
+				{
+					"name": "all departments",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7e453a8f9a9739adfe4ff37d2fefe0b6"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/11.0.2"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/departments",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"departments"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 7e453a8f9a9739adfe4ff37d2fefe0b6"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/11.0.2"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/departments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"departments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 May 2025 18:22:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n {\n  \"id\": 3,\n  \"name\": \"Billing\"\n },\n {\n  \"id\": 2,\n  \"name\": \"Customer Service\"\n },\n {\n  \"id\": 4,\n  \"name\": \"Web Dev\"\n }\n]"
+						}
+					]
+				},
+				{
+					"name": "create departments",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 6e9fe917ea6453a05288736dfc9661da"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/11.0.2"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/departments",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"departments"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "created / 201",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 6e9fe917ea6453a05288736dfc9661da"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/11.0.2"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/departments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"departments"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 May 2025 18:21:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"id\": 9,\n \"name\": \"Web Development\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update departments",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 6e9fe917ea6453a05288736dfc9661da"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/11.0.2"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/departments/9",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"departments",
+								"9"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 6e9fe917ea6453a05288736dfc9661da"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/11.0.2"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/departments/9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"departments",
+										"9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 May 2025 18:21:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"id\": 9,\n \"name\": \"SEO\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete departments",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 6e9fe917ea6453a05288736dfc9661da"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/11.0.2"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/departments/9",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"departments",
+								"9"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 6e9fe917ea6453a05288736dfc9661da"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/11.0.2"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/departments/9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"departments",
+										"9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 May 2025 18:22:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"success\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ticket",
+			"item": [
+				{
+					"name": "create tickets",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7e453a8f9a9739adfe4ff37d2fefe0b6"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/11.0.2"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/tickets",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"tickets"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": " / 429",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 7e453a8f9a9739adfe4ff37d2fefe0b6"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/11.0.2"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/tickets",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tickets"
+									]
+								}
+							},
+							"status": "Too Many Requests",
+							"code": 429,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 May 2025 15:03:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"error\": \"Rate limit exceeded ! you can not create ticket wihtin 10 seconds\"\n}"
+						}
+					]
+				},
+				{
+					"name": "auth tickets",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7e453a8f9a9739adfe4ff37d2fefe0b6"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/11.0.2"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/tickets/my",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"tickets",
+								"my"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 7e453a8f9a9739adfe4ff37d2fefe0b6"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/11.0.2"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/tickets/my",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tickets",
+										"my"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 May 2025 15:00:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n {\n  \"id\": 7,\n  \"title\": \"SO ticket 3\",\n  \"description\": \"SEO des\",\n  \"status\": \"open\",\n  \"user_id\": 6,\n  \"department_id\": 4,\n  \"created_at\": \"2025-05-25 21:00:40\"\n }\n]"
+						}
+					]
+				},
+				{
+					"name": "all tickets",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer ecbae7ec9fcf332e4df41fc8aeeac77c"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/11.0.2"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/tickets",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"tickets"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer ecbae7ec9fcf332e4df41fc8aeeac77c"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/11.0.2"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/tickets",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tickets"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 May 2025 15:01:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n {\n  \"id\": 1,\n  \"title\": \"Cannot access email\",\n  \"description\": \"My corporate email account is locked.\",\n  \"status\": \"open\",\n  \"user_id\": 3,\n  \"department_id\": null,\n  \"created_at\": \"2025-05-20 21:16:44\"\n },\n {\n  \"id\": 2,\n  \"title\": \"Web Development ticket\",\n  \"description\": \"Web Development des\",\n  \"status\": \"open\",\n  \"user_id\": 2,\n  \"department_id\": 2,\n  \"created_at\": \"2025-05-21 05:38:43\"\n },\n {\n  \"id\": 3,\n  \"title\": \"Web Development ticket\",\n  \"description\": \"Web Development des\",\n  \"status\": \"closed\",\n  \"user_id\": 2,\n  \"department_id\": 2,\n  \"created_at\": \"2025-05-21 05:42:09\"\n },\n {\n  \"id\": 4,\n  \"title\": \"SO ticket\",\n  \"description\": \"SEO des\",\n  \"status\": \"open\",\n  \"user_id\": 2,\n  \"department_id\": 4,\n  \"created_at\": \"2025-05-21 12:18:28\"\n },\n {\n  \"id\": 5,\n  \"title\": \"SO ticket 1\",\n  \"description\": \"SEO des\",\n  \"status\": \"open\",\n  \"user_id\": 5,\n  \"department_id\": 4,\n  \"created_at\": \"2025-05-21 13:33:54\"\n },\n {\n  \"id\": 6,\n  \"title\": \"SO ticket 2\",\n  \"description\": \"SEO des\",\n  \"status\": \"open\",\n  \"user_id\": 5,\n  \"department_id\": 4,\n  \"created_at\": \"2025-05-21 13:35:27\"\n },\n {\n  \"id\": 7,\n  \"title\": \"SO ticket 3\",\n  \"description\": \"SEO des\",\n  \"status\": \"open\",\n  \"user_id\": 6,\n  \"department_id\": 4,\n  \"created_at\": \"2025-05-25 21:00:40\"\n }\n]"
+						}
+					]
+				},
+				{
+					"name": "update tickets",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer ecbae7ec9fcf332e4df41fc8aeeac77c"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/11.0.2"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/tickets/6/status",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"tickets",
+								"6",
+								"status"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer ecbae7ec9fcf332e4df41fc8aeeac77c"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/11.0.2"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/tickets/6/status",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tickets",
+										"6",
+										"status"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 May 2025 15:00:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"id\": 6,\n \"title\": \"SO ticket 2\",\n \"description\": \"SEO des\",\n \"status\": \"open\",\n \"user_id\": 5,\n \"department_id\": 4,\n \"created_at\": \"2025-05-21 13:35:27\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ticket note",
+			"item": [
+				{
+					"name": "create ticket notes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7e453a8f9a9739adfe4ff37d2fefe0b6"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/11.0.2"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/tickets/7/notes",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"tickets",
+								"7",
+								"notes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "created / 201",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 7e453a8f9a9739adfe4ff37d2fefe0b6"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/11.0.2"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/tickets/7/notes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tickets",
+										"7",
+										"notes"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 May 2025 15:10:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"id\": 4,\n \"user_id\": 6,\n \"ticket_id\": 7,\n \"note\": \"ticket 7 note\",\n \"created_at\": \"2025-05-25 21:10:24\",\n \"author\": \"mack\"\n}"
+						}
+					]
+				},
+				{
+					"name": "auth ticket notes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7e453a8f9a9739adfe4ff37d2fefe0b6"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/11.0.2"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/tickets/7/notes/my",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"tickets",
+								"7",
+								"notes",
+								"my"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 7e453a8f9a9739adfe4ff37d2fefe0b6"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/11.0.2"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/tickets/7/notes/my",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tickets",
+										"7",
+										"notes",
+										"my"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 May 2025 15:11:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n {\n  \"id\": 4,\n  \"ticket_id\": 7,\n  \"note\": \"ticket 7 note\",\n  \"created_at\": \"2025-05-25 21:10:24\",\n  \"author\": \"mack\"\n }\n]"
+						}
+					]
+				},
+				{
+					"name": "all ticket notes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer ecbae7ec9fcf332e4df41fc8aeeac77c"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/11.0.2"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/tickets/7/notes",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"tickets",
+								"7",
+								"notes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer ecbae7ec9fcf332e4df41fc8aeeac77c"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/11.0.2"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/tickets/7/notes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tickets",
+										"7",
+										"notes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 May 2025 15:12:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n {\n  \"id\": 4,\n  \"ticket_id\": 7,\n  \"note\": \"ticket 7 note\",\n  \"created_at\": \"2025-05-25 21:10:24\",\n  \"author\": \"mack\"\n }\n]"
+						}
+					]
+				},
+				{
+					"name": "delete ticket notes",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer ecbae7ec9fcf332e4df41fc8aeeac77c"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/11.0.2"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/tickets/7/notes/4",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"tickets",
+								"7",
+								"notes",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer ecbae7ec9fcf332e4df41fc8aeeac77c"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/11.0.2"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/tickets/7/notes/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tickets",
+										"7",
+										"notes",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 May 2025 15:12:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"message\": \"Note deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ticket attachemt",
+			"item": [
+				{
+					"name": "upload ticket attachemt",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7e453a8f9a9739adfe4ff37d2fefe0b6"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/11.0.2"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/tickets/7/attachments",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"tickets",
+								"7",
+								"attachments"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "created / 201",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 7e453a8f9a9739adfe4ff37d2fefe0b6"
+									},
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/11.0.2"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/tickets/7/attachments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tickets",
+										"7",
+										"attachments"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 May 2025 15:23:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"id\": 2,\n \"ticket_id\": 7,\n \"file_path\": \"uploads/6833360601bf9_Golam Mahmud - Resume.pdf\",\n \"uploaded_at\": \"2025-05-25 21:23:50\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete ticket attachemt",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7e453a8f9a9739adfe4ff37d2fefe0b6"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/11.0.2"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/tickets/7/attachments/2",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"tickets",
+								"7",
+								"attachments",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 7e453a8f9a9739adfe4ff37d2fefe0b6"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/11.0.2"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/tickets/7/attachments/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tickets",
+										"7",
+										"attachments",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 May 2025 15:24:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"message\": \"Attachment deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL1",
+			"value": "http://localhost:8000",
+			"type": "any"
+		}
+	]
+}
