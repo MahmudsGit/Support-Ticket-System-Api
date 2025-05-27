@@ -32,13 +32,19 @@ config/db.php
 ``
 with your MySQL credentials.**
 
-5. **Start the PHP server**
+5. **seeding data**
+
+```cmd
+php seed.php
+```
+
+6. **Start the PHP server**
 
 ```cmd
 php -S localhost:8000
 ```
 
-6. **Use the API**
+7. **Use the API**
 
 Register users: ``{URL}/api/register``
 
@@ -50,7 +56,7 @@ Use token-based auth via ``Authorization: Bearer {token}`` header.
 
 Manage departments, tickets, notes, and uploads via RESTful endpoints.
 
-7. **API Documantation Or import postman collection from git to postman**
+8. **API Documantation Or import postman collection from git to postman**
 
 ```cmd
 https://documenter.getpostman.com/view/21749152/2sB2qcCLwb
